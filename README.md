@@ -1,11 +1,25 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Presentation
 
-To start the slide show:
+A [Slidev](https://sli.dev/) deck, published as a static site on GitHub Pages.
 
-- `npm install`
-- `npm run dev`
+## Local development
+
+- `pnpm install`
+- `pnpm run dev`
 - visit <http://localhost:3030>
 
-Edit the [slides.md](./slides.md) to see the changes.
+Edit [slides.md](./slides.md) to change the slides.
 
-Learn more about Slidev at the [documentation](https://sli.dev/).
+## Deploy
+
+Pushing to `main` builds the deck and deploys it to GitHub Pages via
+[.github/workflows/deploy-pages.yml](./.github/workflows/deploy-pages.yml).
+The workflow can also be started manually from the Actions tab.
+
+Published at <https://lyndsysimon.github.io/presentation-temp/>.
+
+Preview the production build locally:
+
+```
+pnpm run build --base /presentation-temp/ --out dist
+```
